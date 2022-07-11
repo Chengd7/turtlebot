@@ -30,7 +30,7 @@ class GoForward():
         rospy.init_node('GoForward', anonymous=False)
 
 	# tell user how to stop TurtleBot
-	rospy.loginfo("To stop TurtleBot CTRL + C")
+        rospy.loginfo("To stop TurtleBot CTRL + C")
 
         # What function to call when you ctrl + c    
         rospy.on_shutdown(self.shutdown)
@@ -47,7 +47,7 @@ class GoForward():
 	# let's go forward at 0.2 m/s
         move_cmd.linear.x = 0.2
 	# let's turn at 0 radians/s
-	move_cmd.angular.z = 0
+        move_cmd.angular.z = 0
 
 	# as long as you haven't ctrl + c keeping doing...
         while not rospy.is_shutdown():
@@ -67,6 +67,6 @@ class GoForward():
  
 if __name__ == '__main__':
     try:
+        GoForward()
     except:
         rospy.loginfo("GoForward node terminated.")
-
