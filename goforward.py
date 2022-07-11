@@ -69,5 +69,4 @@ if __name__ == '__main__':
     try:
     except:
         rospy.loginfo("GoForward node terminated.")
-	
-# hello from chj
+
