@@ -76,11 +76,11 @@ class GoForward():
                   move_cmd.angular.z = controlist[con_counter][1]
                   self.cmd_vel.publish(move_cmd)
                   #rospy.loginfo("Forward")
-                elif counter>= interv and counter<wait:
-                  move_cmd.linear.x = 0.00
-                  move_cmd.angular.z = 0
-                  self.cmd_vel.publish(move_cmd)
-                  #rospy.loginfo("Stop")
+                #elif counter>= interv and counter<wait:
+                  #move_cmd.linear.x = 0.00
+                  #move_cmd.angular.z = 0
+                  #self.cmd_vel.publish(move_cmd)
+                  ##rospy.loginfo("Stop")
                 else:
                   #reset time counter
                   counter = -1
